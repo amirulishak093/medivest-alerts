@@ -6,8 +6,10 @@ export const actions: Actions = {
 	default: async ({ request }) => {
 		const formData = await request.formData();
 
+		console.log(formData);
+
 		const name = formData.get('name') as string;
-		const level = parseInt(formData.get('name') as string);
+		const level = parseInt(formData.get('level') as string);
 		const originID = formData.get('originID') as string;
 		const description = formData.get('description') as string;
 
