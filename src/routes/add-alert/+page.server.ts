@@ -24,7 +24,7 @@ export const actions: Actions = {
 			console.log(error);
 
 			return {
-				error
+				error: true
 			};
 		}
 	}
