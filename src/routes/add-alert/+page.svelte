@@ -57,11 +57,6 @@
 				<Input type="text" name="originID" placeholder="Type originID" />
 			</div>
 			<div class="w-full">
-				<Label>Category
-					<Select class="mt-2" items={priorityOptions} required bind:value={level} />
-				</Label>
-			</div>
-			<div class="w-full">
 				<Label>Priority
 					<Select class="mt-2" items={priorityOptions} required bind:value={level} />
 				</Label>
