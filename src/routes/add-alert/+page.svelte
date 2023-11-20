@@ -74,13 +74,18 @@
 			</div>
 
 			<input name="level" type="hidden" bind:value={level} />
-			{#if $loading}
-				<Button type="submit" class="w-36" disabled={true}
-					><Spinner class="mr-3" size="4" color="white" />Loading...</Button
-				>
-			{:else}
-				<Button type="submit" class="w-32" disabled={false}>Add Alert</Button>
-			{/if}
+
+			<div class="flex gap-2">
+				{#if $loading}
+					<Button type="submit" class="w-36" disabled={true}
+						><Spinner class="mr-3" size="4" color="white" />Loading...</Button
+					>
+				{:else}
+					<Button type="submit" class="w-32" disabled={false}>Add Alert</Button>
+				{/if}
+				<Button color="alternative" type="reset" class="w-32">Clear</Button>
+			</div>
+
 		</div>
 	</form>
 </Section>
