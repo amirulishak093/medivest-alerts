@@ -46,19 +46,23 @@
 		}}
 	>
 		<div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-			<div class="sm:col-span-2">
+			<div class="w-full">
 				<Label for="name" class="mb-2">Alert Name</Label>
 				<Input type="text" name="name" placeholder="Type alert name" required />
 			</div>
 			<div class="w-full">
-				<Label for="name" class="mb-2"
+				<Label for="originID" class="mb-2"
 					>Alert OriginID <span class="font-normal text-gray-400 italic">(Optional)</span></Label
 				>
 				<Input type="text" name="originID" placeholder="Type originID" />
 			</div>
 			<div class="w-full">
-				<Label
-					>Priority
+				<Label>Category
+					<Select class="mt-2" items={priorityOptions} required bind:value={level} />
+				</Label>
+			</div>
+			<div class="w-full">
+				<Label>Priority
 					<Select class="mt-2" items={priorityOptions} required bind:value={level} />
 				</Label>
 			</div>
