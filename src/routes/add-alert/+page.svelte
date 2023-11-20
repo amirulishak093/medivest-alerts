@@ -41,6 +41,7 @@
 					$loading = false;
 				}, 1000);
 				await applyAction(result);
+				await invalidateAll();
 			};
 		}}
 	>
